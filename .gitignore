@@ -1,0 +1,5 @@
+.vscode/
+*.o
+*.exe
+crypto_portfolio
+portfolio.txt
