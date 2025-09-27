@@ -1,32 +1,27 @@
 /*************************************************************************/
-/* File Name: Crypto.h                                                   */
+/* File Name: crypto.h                                                   */
 /* Author: Christopher Frias                                             */
-/* Purpose: Declares the Crypto class, which represents a cryptocurrency */
-/*          holding with name, symbol, quantity, and USD price.          */
+/* Purpose: Defines the Crypto class for managing cryptocurrency data.  */
 /*                                                                       */
 /* Usage:                                                                */
-/*   Include this header in Portfolio.h / Portfolio.cpp and main.cpp.    */
-/*   Requires: <string>                                                  */
+/*   Include this header in your implementation files (e.g., crypto.cpp)*/
 /*************************************************************************/
-
 #ifndef CRYPTO_H
 #define CRYPTO_H
 
 #include <string>
+using namespace std;
 
 class Crypto {
 public:
-std::string name;    // Full name of the crypto (e.g., "Bitcoin")
-std::string symbol;  // Symbol shorthand (e.g., "BTC")
-double quantity;     // Number of coins owned
-double priceUSD;     // Price per coin in USD
+    string name;
+    string symbol;
+    double quantity;
+    double priceUSD;
 
-// Constructor
-Crypto(const std::string& name, const std::string& symbol, double quantity);
+    Crypto(const string& name, const string& symbol, double quantity);
 
-// Return total value in USD = quantity * priceUSD
-double getValueUSD() const;
-
+    double getValueUSD() const;
 };
 
-#endif // CRYPTO_H
+#endif
